@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "areas/colors";
+@import "areas/utility";
+@import "areas/body";
+@import "areas/buttons";
+@import "areas/typography";
+@import "areas/forms";
+@import "components/_glob";

@@ -1,0 +1,13 @@
+// Transition Cubic Bezier Default
+@mixin t1($time: 0.3s, $el: all, $ease: cubic-bezier(0.17, 0.67, 0.83, 0.67)) {
+  transition: $el $time $ease;
+}
+.t1 {
+  @include t1;
+}
+
+// Font smoothing
+@mixin fontSmooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

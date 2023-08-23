@@ -1,0 +1,144 @@
+:root {
+  --header-line-height: 120%;
+  --header-letter-spacing: 0;
+  --header-font-weight: 600;
+  --header-margin: 0 0 0px 0;
+
+  --paragraph-line-height: 150%;
+  --paragraph-letter-spacing: 0;
+  --paragraph-font-weight: 500;
+  --paragraph-bold-weight: 600;
+  --paragraph-margin: 0 0 0px 0;
+
+  // Mobile default font sizes
+  --text-h1: 24px;
+  --text-h2: 22px;
+  --text-h3: 20px;
+  --text-h4: 18px;
+  --text-body-large: 16px;
+  --text-body: 15px;
+  --text-md: 14px;
+  --text-sm: 12px;
+  --text-xs: 10px;
+}
+
+// Font styling
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--header-margin);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: var(--header-line-height);
+  letter-spacing: var(--header-letter-spacing);
+  font-weight: var(--header-font-weight);
+  @apply text-header font-brand;
+}
+
+body {
+  @apply text-header font-brand;
+  font-size: var(--text-body);
+}
+
+p,
+small,
+li,
+b,
+ul {
+  @include fontSmooth;
+  line-height: var(--paragraph-line-height);
+  letter-spacing: var(--paragraph-letter-spacing);
+  font-weight: var(--paragraph-font-weight);
+  margin: var(--paragraph-margin);
+  font-size: var(--text-body);
+}
+
+p,
+small,
+li,
+b,
+ul {
+  @apply text-body font-sans;
+}
+
+h1,
+.h1 {
+  @apply text-h1;
+}
+h2,
+.h2 {
+  @apply text-h2;
+}
+h3,
+.h3 {
+  @apply text-h3;
+}
+h4,
+.h4 {
+  @apply text-h4;
+}
+p {
+  @apply text-base;
+  @apply mb-4;
+}
+small,
+.small {
+  @apply text-xs;
+}
+b,
+strong {
+  font-weight: var(--paragraph-bold-weight);
+}
+
+// Button typography settings
+.btn {
+  line-height: var(--btn-line-height);
+  letter-spacing: var(--btn-letter-spacing);
+  font-weight: var(--btn-font-weight);
+  margin: var(--btn-margin);
+  font-size: var(--text-btn);
+}
+
+// Misc
+article,
+pre,
+address,
+blockquote {
+  @apply my-5 py-5;
+}
+
+pre {
+  @apply overflow-scroll;
+}
+
+ul.list {
+  @apply mb-4;
+  li {
+    @apply list-disc list-inside mt-4;
+  }
+}
+
+ol.list {
+  @apply mb-4;
+  li {
+    @apply list-decimal list-inside mt-4;
+  }
+}
+
+a {
+  @apply text-primary;
+}
