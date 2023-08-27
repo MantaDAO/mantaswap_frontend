@@ -34,13 +34,13 @@ const config: Config = {
       },
       colors: {
         primary: {
-          DEFAULT: "(--var-color-primary)",
+          DEFAULT: "var(--color-primary)",
         },
         secondary: {
-          DEFAULT: "(--var-color-secondary)",
+          DEFAULT: "var(--color-secondary)",
         },
         tertiary: {
-          DEFAULT: "(--var-color-tertiary)",
+          DEFAULT: "var(--color-tertiary)",
         },
         surface: {
           lightest: "var(--color-surface-lightest)",

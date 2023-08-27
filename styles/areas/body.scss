@@ -1,5 +1,5 @@
-body {
-  @apply bg-surface-bg;
+html, body {
+  @apply bg-surface-bg min-h-screen;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;

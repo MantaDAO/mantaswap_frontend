@@ -1,5 +1,5 @@
 // Transition Cubic Bezier Default
-@mixin t1($time: 0.3s, $el: all, $ease: cubic-bezier(0.17, 0.67, 0.83, 0.67)) {
+@mixin t1($time: 0.2s, $el: all, $ease: cubic-bezier(0.4, 0, 0.2, 1)) {
   transition: $el $time $ease;
 }
 .t1 {
