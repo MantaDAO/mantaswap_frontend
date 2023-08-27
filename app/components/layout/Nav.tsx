@@ -10,6 +10,8 @@ import IconVaults from '../icons/Vaults';
 import ActiveGraphic from '@/assets/img/navActiveGfk.png';
 import Image from 'next/image';
 import { Transition } from '@headlessui/react';
+import Button from '../ui/Button';
+import ChainSelector from './ChainSelector';
 
 type NavItem = {
   label: string;
@@ -44,7 +46,7 @@ const Nav = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-full h-[68px] absolute backdrop-blur-bg bg-[#0C0C18] bg-opacity-60">
+      <div className="w-full h-[68px] absolute backdrop-blur-lg bg-surface-nav z-10">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3D3D56] to-transparent"></div>
         <div className="nav-inner w-full h-full flex items-center justify-between px-5">
           <Logo />
@@ -63,12 +65,12 @@ const Nav = () => {
                   >
                     <Transition
                       show={isActive}
-                      enter="transition-opacity duration-2000"
-                      enterFrom="opacity-0"
+                      enter="transition-opacity duration-[1000ms]"
+                      enterFrom="opacity-0 translate-y-full"
                       enterTo="opacity-100"
-                      leave="transition-opacity duration-300"
+                      leave="transition-opacity duration-[800ms]"
                       leaveFrom="opacity-100"
-                      leaveTo="opacity-0 translate-y-1/2"
+                      leaveTo="opacity-0 translate-y-1/2 duration-[800ms]"
                     >
                       <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[200%] h-[200%] z-0">
                         <Image
@@ -81,7 +83,7 @@ const Nav = () => {
                     </Transition>
                     <Link
                       href={`/${href}`}
-                      className="flex gap-2 h-full px-7 items-center relative z-10 group"
+                      className="flex gap-2 h-full px-7 items-center relative group"
                     >
                       <IconComponent
                         fill="currentColor"
@@ -90,7 +92,7 @@ const Nav = () => {
                         }`}
                       />
                       <div
-                        className={`t1 group-hover:text-header ${
+                        className={`t1 group-hover:text-header font-medium ${
                           isActive ? 'text-header' : 'text-body'
                         }`}
                       >
@@ -102,7 +104,10 @@ const Nav = () => {
               })}
             </ul>
           </nav>
-          <div>button area</div>
+          <div className="flex items-center gap-2">
+            <ChainSelector />
+            <Button variant="primary">Connect</Button>
+          </div>
         </div>
       </div>
       <div className="w-full h-[68px]"></div>

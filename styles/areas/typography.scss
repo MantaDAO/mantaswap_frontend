@@ -1,14 +1,14 @@
 :root {
   --header-line-height: 120%;
   --header-letter-spacing: 0;
-  --header-font-weight: 600;
-  --header-margin: 0 0 0px 0;
+  --header-font-weight: 500;
+  --header-margin: 0;
 
   --paragraph-line-height: 150%;
   --paragraph-letter-spacing: 0;
-  --paragraph-font-weight: 500;
+  --paragraph-font-weight: 400;
   --paragraph-bold-weight: 600;
-  --paragraph-margin: 0 0 0px 0;
+  --paragraph-margin: 0;
 
   // Mobile default font sizes
   --text-h1: 24px;
@@ -63,7 +63,7 @@ ul {
   line-height: var(--paragraph-line-height);
   letter-spacing: var(--paragraph-letter-spacing);
   font-weight: var(--paragraph-font-weight);
-  margin: var(--paragraph-margin);
+  margin: 0;
   font-size: var(--text-body);
 }
 
