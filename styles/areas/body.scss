@@ -1,7 +1,12 @@
-html, body {
+html,
+body {
   @apply bg-surface-bg min-h-screen;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  @apply w-full px-5 relative;
 }

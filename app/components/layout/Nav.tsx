@@ -63,10 +63,10 @@ const Nav = () => {
                   >
                     <Transition
                       show={isActive}
-                      enter="transition-all duration-800"
+                      enter="transition-opacity duration-2000"
                       enterFrom="opacity-0"
                       enterTo="opacity-100"
-                      leave="transition-all duration-300"
+                      leave="transition-opacity duration-300"
                       leaveFrom="opacity-100"
                       leaveTo="opacity-0 translate-y-1/2"
                     >
@@ -81,13 +81,21 @@ const Nav = () => {
                     </Transition>
                     <Link
                       href={`/${href}`}
-                      className="flex gap-2 h-full px-5 items-center relative z-10"
+                      className="flex gap-2 h-full px-7 items-center relative z-10 group"
                     >
                       <IconComponent
                         fill="currentColor"
-                        className={`w-4 t1 ${isActive ? 'text-tertiary' : 'text-body-2'}`}
+                        className={`w-4 group-hover:text-body t1 ${
+                          isActive ? 'text-tertiary' : 'text-body-2'
+                        }`}
                       />
-                      <div className={`t1 ${isActive ? 'text-header' : 'text-body'}`}>{label}</div>
+                      <div
+                        className={`t1 group-hover:text-header ${
+                          isActive ? 'text-header' : 'text-body'
+                        }`}
+                      >
+                        {label}
+                      </div>
                     </Link>
                   </li>
                 );

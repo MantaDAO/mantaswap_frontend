@@ -15,10 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <div className="fixed bottom-0 w-[60vw] h-[50vw] opacity-10 left-0">
-          <div className="radial-circle w-[1200px] h-[1200px] absolute top-0 right-0"></div>
+          <div className="radial-circle w-[1200px] h-[1200px] top-0 right-0 absolute"></div>
         </div>
         <Nav />
-        {children}
+        <div className="min-h-[calc(100vh-68px)] w-full py-10">{children}</div>
       </body>
     </html>
   );
