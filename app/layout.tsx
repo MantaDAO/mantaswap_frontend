@@ -18,9 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="radial-circle w-[1200px] h-[1200px] top-0 right-0 absolute"></div>
         </div>
         <Nav />
-        <div className="min-h-[calc(100vh-68px)] w-full py-20 flex flex-col relative z-0 px-5">
-          {children}
-        </div>
+        <div className="w-full py-20 flex flex-col relative z-0 px-5">{children}</div>
       </body>
     </html>
   );

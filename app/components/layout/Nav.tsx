@@ -2,6 +2,7 @@
 
 import Logo from '../brand/Logo';
 import Link from 'next/link';
+import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import IconSwap from '../icons/Swap';
 import IconBridge from '../icons/Bridge';
@@ -12,10 +13,11 @@ import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import Button from '../ui/Button';
 import ChainSelector from './ChainSelector';
+import LogoSm from '../brand/LogoSmall';
 
 type NavItem = {
   label: string;
-  icon: any;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   href: string;
 };
 
@@ -42,16 +44,30 @@ const navItems: Record<string, NavItem> = {
   },
 };
 
-const Nav = () => {
+const Nav: React.FC = () => {
   const pathname = usePathname();
+  const [height, setHeight] = useState<number>(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      setHeight(ref.current.clientHeight);
+    }
+  }, []);
+
   return (
     <>
-      <div className="w-full h-[68px] absolute backdrop-blur-lg bg-surface-nav z-10">
+      <div
+        className="w-full sm:h-[68px] fixed top-0 backdrop-blur-sm bg-surface-nav z-10"
+        ref={ref}
+      >
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3D3D56] to-transparent"></div>
-        <div className="nav-inner w-full h-full flex items-center justify-between px-5">
-          <Logo />
-          <nav className="h-full overflow-hidden px-10">
-            <ul className="flex h-full">
+        <div className="nav-inner w-full h-full flex sm:flex-row items-center justify-between sm:px-5 flex-col-reverse">
+          <div className="hidden sm:block">
+            <Logo />
+          </div>
+          <nav className="h-full overflow-hidden sm:px-5 sm:pb-0 flex-grow justify-center w-full sm:w-auto max-w-[420px] px-5 sm:max-w-none">
+            <ul className="flex h-full w-full justify-between sm:justify-center">
               {Object.keys(navItems).map((key) => {
                 const { label, icon: IconComponent, href } = navItems[key];
                 const isActive =
@@ -65,7 +81,7 @@ const Nav = () => {
                   >
                     <Transition
                       show={isActive}
-                      enter="transition-opacity duration-[1000ms]"
+                      enter="transition-opacity duration-[500ms]"
                       enterFrom="opacity-0 translate-y-full"
                       enterTo="opacity-100"
                       leave="transition-opacity duration-[800ms]"
@@ -83,11 +99,11 @@ const Nav = () => {
                     </Transition>
                     <Link
                       href={`/${href}`}
-                      className="flex gap-2 h-full px-7 items-center relative group"
+                      className="gap-2 sm:h-full flex sm:px-3 md:px-6 lg:px-7 items-center relative group z-10 h-12"
                     >
                       <IconComponent
                         fill="currentColor"
-                        className={`w-4 group-hover:text-body t1 ${
+                        className={`w-4 group-hover:text-body t1 hidden sm:block ${
                           isActive ? 'text-tertiary' : 'text-body-2'
                         }`}
                       />
@@ -104,13 +120,19 @@ const Nav = () => {
               })}
             </ul>
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full justify-between sm:justify-normal py-3 sm:py-0 sm:w-auto relative z-40 px-3 sm:px-0">
             <ChainSelector />
+            <div className="sm:hidden">
+              <LogoSm />
+            </div>
             <Button variant="primary">Connect</Button>
           </div>
         </div>
       </div>
-      <div className="w-full h-[68px]"></div>
+      <div
+        className="w-full sm:h-[68px]"
+        style={{ height: height }}
+      ></div>
     </>
   );
 };

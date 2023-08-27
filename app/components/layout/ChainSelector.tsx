@@ -22,16 +22,16 @@ const chains: Record<string, Chain> = {
 
 const ChainSelector: React.FC = () => {
   return (
-    <Popover className="relative">
+    <Popover className="relative backdrop-blur-lg">
       <Popover.Button
-        className={`flex items-center gap-1 relative z-10 outline-none hover:bg-surface-lightest h-[40px] rounded px-3 border`}
+        className={`flex items-center gap-1 relative z-10 outline-none bg-surface-c1 hover:bg-surface-c2 t1 shadow-c1 border-gradient h-[40px] rounded px-3 group`}
       >
         <img
           src="/img/icons/kujira.webp"
           alt="Kujira"
           className="h-6 rounded-full"
         />
-        <ChevronDownIcon className="w-6 text-body-2" />
+        <ChevronDownIcon className="w-6 text-body-2 group-hover:text-body" />
       </Popover.Button>
 
       <Transition
@@ -42,7 +42,7 @@ const ChainSelector: React.FC = () => {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-80 opacity-0"
       >
-        <Popover.Panel className="absolute z-10 right-0 top-2">
+        <Popover.Panel className="absolute z-10 left-0 sm:left-auto sm:right-0 top-2">
           <BaseCard className="w-[300px] p-[24px] flex flex-col">
             <div>
               <h3>Select chain</h3>
