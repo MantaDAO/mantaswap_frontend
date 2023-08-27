@@ -58,7 +58,7 @@ const Nav: React.FC = () => {
   return (
     <>
       <div
-        className="w-full sm:h-[68px] fixed top-0 backdrop-blur-sm bg-surface-nav z-10"
+        className="w-full sm:h-[68px] absolute sm:fixed top-0 backdrop-blur-sm bg-surface-nav z-10"
         ref={ref}
       >
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3D3D56] to-transparent"></div>
