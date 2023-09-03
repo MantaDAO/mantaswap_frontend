@@ -62,6 +62,7 @@ const config: Config = {
         negative: '#E55656',
         caution: '#EE8A46',
         gold: '#F6B611',
+        border: 'var(--color-border)',
         header: {
           DEFAULT: 'var(--color-header)',
         },
