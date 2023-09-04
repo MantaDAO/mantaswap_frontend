@@ -15,6 +15,10 @@ import Button from '../ui/Button';
 import ChainSelector from './ChainSelector';
 import LogoSm from '../brand/LogoSmall';
 
+import { useAtom } from 'jotai';
+import { demoSignedIn } from '@/store/atoms';
+import UserMenu from './UserMenu';
+
 type NavItem = {
   label: string;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -45,6 +49,7 @@ const navItems: Record<string, NavItem> = {
 };
 
 const Nav: React.FC = () => {
+  const [signedIn, setSignedIn] = useAtom(demoSignedIn);
   const pathname = usePathname();
   const [height, setHeight] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -125,7 +130,7 @@ const Nav: React.FC = () => {
             <div className="sm:hidden">
               <LogoSm />
             </div>
-            <Button variant="primary">Connect</Button>
+            {signedIn ? <UserMenu /> : <Button variant="primary">Connect</Button>}
           </div>
         </div>
       </div>

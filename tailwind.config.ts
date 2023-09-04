@@ -33,8 +33,8 @@ const config: Config = {
           '0px 8px 40px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(45, 45, 81, 0.50) inset, 0px 0px 10px 0px rgba(52, 52, 69, 0.30) inset',
         dark: '0 11px 33px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.09)',
         c1: '0px 8px 40px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(45, 45, 81, 0.50) inset, 0px 0px 10px 0px rgba(52, 52, 69, 0.30) inset',
-        c2: 'box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12), 0px 0px 16px 0px rgba(45, 45, 81, 0.20) inset',
-        c3: 'box-shadow: 0px 0px 16px 0px rgba(45, 45, 81, 0.50) inset',
+        c2: '0px 8px 40px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(45, 45, 81, 0.30) inset, 0px 0px 10px 0px rgba(52, 52, 69, 0.20) inset',
+        c3: '0px 8px 40px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(45, 45, 81, 0.10) inset, 0px 0px 10px 0px rgba(52, 52, 69, 0.20) inset',
       },
       colors: {
         primary: {
@@ -63,6 +63,7 @@ const config: Config = {
         caution: '#EE8A46',
         gold: '#F6B611',
         border: 'var(--color-border)',
+        'border-light': 'var(--color-border-light)',
         header: {
           DEFAULT: 'var(--color-header)',
         },
@@ -73,10 +74,12 @@ const config: Config = {
       },
       borderColor: (theme) => ({
         DEFAULT: 'var(--color-border)',
+        light: 'var(--color-border-light)',
         dark: 'var(--color-border)',
       }),
     },
     screens: {
+      xs: '500px',
       sm: '800px',
       md: '900px',
       lg: '1000px',

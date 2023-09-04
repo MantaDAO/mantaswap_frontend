@@ -29,7 +29,7 @@ const ChainSelector: React.FC = () => {
   return (
     <Popover className="relative backdrop-blur-lg">
       <Popover.Button
-        className={`flex items-center gap-1 relative z-10 outline-none bg-surface-c1 hover:bg-surface-c3 t1 shadow-c1 border-gradient h-[40px] rounded px-3 group`}
+        className={`flex items-center gap-1 relative z-10 outline-none bg-surface-c1 hover:bg-surface-c3 t1 shadow-c1 border-gradient h-[40px] rounded px-3 group ring-header ui-open:border-light transition`}
       >
         {currentChainId === 'kujira' ? (
           <img
@@ -44,7 +44,7 @@ const ChainSelector: React.FC = () => {
             className="h-6 rounded-full"
           />
         )}
-        <ChevronDownIcon className="w-6 text-body-2 group-hover:text-body" />
+        <ChevronDownIcon className="w-6 text-body-2 group-hover:text-body ui-open:rotate-180 transition" />
       </Popover.Button>
 
       <Transition

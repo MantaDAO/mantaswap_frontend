@@ -5,3 +5,4 @@ import { atom } from 'jotai';
 
 // Active chain
 export const currentChainIdAtom = atom('kujira');
+export const demoSignedIn = atom(false);
