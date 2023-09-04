@@ -1,3 +1,5 @@
-input {
+input,
+textarea,
+select {
   @apply outline-0 bg-transparent;
 }

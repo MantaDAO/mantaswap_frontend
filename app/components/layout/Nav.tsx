@@ -51,21 +51,10 @@ const navItems: Record<string, NavItem> = {
 const Nav: React.FC = () => {
   const [signedIn, setSignedIn] = useAtom(demoSignedIn);
   const pathname = usePathname();
-  const [height, setHeight] = useState<number>(0);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      setHeight(ref.current.clientHeight);
-    }
-  }, []);
 
   return (
     <>
-      <div
-        className="w-full sm:h-[68px] absolute sm:fixed top-0 backdrop-blur-sm bg-surface-nav z-10"
-        ref={ref}
-      >
+      <div className="w-full sm:h-[68px] absolute sm:fixed top-0 backdrop-blur-sm bg-surface-nav z-10">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3D3D56] to-transparent"></div>
         <div className="nav-inner w-full h-full flex sm:flex-row items-center justify-between sm:px-5 flex-col-reverse">
           <div className="hidden sm:block">
@@ -134,10 +123,7 @@ const Nav: React.FC = () => {
           </div>
         </div>
       </div>
-      <div
-        className="w-full sm:h-[68px]"
-        style={{ height: height }}
-      ></div>
+      <div className="w-full h-[130px] sm:h-[68px]"></div>
     </>
   );
 };

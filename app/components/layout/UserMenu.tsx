@@ -68,6 +68,7 @@ const UserMenu = () => {
                 <EllipsisVerticalIcon className="w-5 ui-open:rotate-90 transition" />
               </Button>
             </Popover.Button>
+
             <Transition
               enter="transition duration-200 ease-out"
               enterFrom="transform scale-80 opacity-0"
@@ -76,10 +77,10 @@ const UserMenu = () => {
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-80 opacity-0"
             >
-              <Popover.Panel className="absolute z-10 right-0 top-2 w-full flex items-end justify-end">
+              <Popover.Panel className="absolute w-[300px] z-10 right-0 top-2 flex items-end justify-end">
                 <BaseCard
                   type={2}
-                  className="block w-[300px] p-5"
+                  className="block w-full p-5"
                 >
                   <div className="flex items-center gap-5 flex-col">
                     <div className="flex items-center w-full gap-3">

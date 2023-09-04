@@ -53,7 +53,7 @@ const config: Config = {
           bg: 'var(--color-surface-bg)',
           dark: 'var(--color-surface-dark)',
           darkest: 'var(--color-surface-darkest)',
-          c1: 'rgba(14,14,24,0.85)',
+          c1: 'rgba(14,14,24,0.8)',
           c2: 'var(--color-surface-lighter)',
           c3: '#151526',
           nav: 'rgba(12,12,24,0.6)',

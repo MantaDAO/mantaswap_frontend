@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="radial-circle w-[1200px] h-[1200px] top-0 right-0 absolute"></div>
         </div>
         <Nav />
-        <div className="w-full py-5 sm:py-20 flex flex-col relative z-0 px-5">{children}</div>
+        <div className="w-full py-5 sm:py-12 flex flex-col relative z-0 px-5">{children}</div>
 
         <div className="px-5 flex items-center justify-center">
           <DemoSignInButton />

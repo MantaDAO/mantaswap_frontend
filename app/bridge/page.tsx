@@ -1,7 +1,10 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import BridgeScr from './components/Bridge';
 
 export default function Bridge() {
   return (
-    <div>Bridge</div>
-  )
+    <div className="w-full flex justify-center">
+      <BridgeScr />
+    </div>
+  );
 }

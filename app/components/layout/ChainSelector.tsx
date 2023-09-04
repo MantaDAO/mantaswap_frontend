@@ -56,7 +56,10 @@ const ChainSelector: React.FC = () => {
         leaveTo="transform scale-80 opacity-0"
       >
         <Popover.Panel className="absolute z-10 left-0 sm:left-auto sm:right-0 top-2">
-          <BaseCard className="w-[300px] p-[24px] flex flex-col">
+          <BaseCard
+            type={2}
+            className="w-[300px] p-[24px] flex flex-col"
+          >
             <div>
               <h3>Select chain</h3>
               <p>Change your network</p>

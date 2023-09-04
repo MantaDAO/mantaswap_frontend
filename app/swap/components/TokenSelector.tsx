@@ -9,6 +9,7 @@ import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import BaseCard from '@/app/components/cards/Base';
 import TokenChip from '@/app/components/cards/TokenChip';
 import TokenValueSelector from '@/app/components/cards/TokenValueSelector';
+import InputWrap from '@/app/components/forms/InputWrap';
 
 const popularTokens = [
   {
@@ -100,17 +101,14 @@ const TokenSelector = () => {
         className="flex flex-col gap-5"
       >
         <div className="w-full flex items-center gap-3">
-          <BaseCard
-            type={2}
-            className="flex gap-2 items-center px-3 py-2 flex-grow w-full"
-          >
+          <InputWrap>
             <MagnifyingGlassIcon className="w-4" />
             <input
               type="text"
               placeholder="Search by token"
               className="bg-transparent"
             />
-          </BaseCard>
+          </InputWrap>
           <Button
             onClick={() => setOpen(false)}
             size="icon"
