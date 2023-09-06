@@ -23,6 +23,7 @@ const ConnectButton = () => {
         <BaseCard
           type={1}
           className="absolute p-5 top-0 right-0 w-[300px]"
+          absolute
         >
           <Button
             onClick={() => setShowModal(false)}
