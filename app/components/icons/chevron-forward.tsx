@@ -1,4 +1,4 @@
-export const ChevronForward: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const ChevronForward: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       width="6"

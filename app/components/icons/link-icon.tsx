@@ -1,4 +1,4 @@
-export const LinkIcon: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const LinkIcon: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       viewBox="0 0 18 18"

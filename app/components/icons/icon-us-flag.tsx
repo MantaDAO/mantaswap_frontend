@@ -1,4 +1,4 @@
-export const IconUSFlag: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const IconUSFlag: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       width="30"
@@ -36,7 +36,11 @@ export const IconUSFlag: React.FC<React.SVGAttributes<{}>> = (props) => {
       </g>
       <defs>
         <clipPath id="clip0_151_1193">
-          <rect width="30" height="30" fill="white" />
+          <rect
+            width="30"
+            height="30"
+            fill="white"
+          />
         </clipPath>
       </defs>
     </svg>

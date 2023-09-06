@@ -1,32 +1,50 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-export const IconFIS: FC<JSX.IntrinsicElements["svg"]> = (props) => (
+export const IconFIS: FC<JSX.IntrinsicElements['svg']> = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 78 78"
     className="icon-denom"
-    {...props}>
+    {...props}
+  >
     <defs>
       <linearGradient
         id="a"
         x1="10.493%"
         x2="92.253%"
         y1="0%"
-        y2="100%">
-        <stop offset="0%" stopColor="#0093ED" />
-        <stop offset="100%" stopColor="#00F3AB" />
+        y2="100%"
+      >
+        <stop
+          offset="0%"
+          stopColor="#0093ED"
+        />
+        <stop
+          offset="100%"
+          stopColor="#00F3AB"
+        />
       </linearGradient>
       <linearGradient
         id="b"
         x1="66%"
         x2="10.812%"
         y1="92.56%"
-        y2="0%">
-        <stop offset="0%" stopColor="#000A17" />
-        <stop offset="100%" stopColor="#00554F" />
+        y2="0%"
+      >
+        <stop
+          offset="0%"
+          stopColor="#000A17"
+        />
+        <stop
+          offset="100%"
+          stopColor="#00554F"
+        />
       </linearGradient>
     </defs>
-    <g fill="none" fillRule="evenodd">
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
       <path
         fill="url(#a)"
         stroke="#00F3AB"

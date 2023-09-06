@@ -1,12 +1,12 @@
-import * as React from "react";
-const SVGComponent = (props) => (
+import * as React from 'react';
+const SVGComponent = (props: any) => (
   <svg
     viewBox="0 0 76 76"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <title>{"Group 9"}</title>
+    <title>{'Group 9'}</title>
     <defs>
       <linearGradient
         x1="10.4929716%"
@@ -15,8 +15,14 @@ const SVGComponent = (props) => (
         y2="100%"
         id="linearGradient-1"
       >
-        <stop stopColor="#0093ED" offset="0%" />
-        <stop stopColor="#00F3AB" offset="100%" />
+        <stop
+          stopColor="#0093ED"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00F3AB"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="65.9995755%"
@@ -25,8 +31,14 @@ const SVGComponent = (props) => (
         y2="0%"
         id="linearGradient-2"
       >
-        <stop stopColor="#000A17" offset="0%" />
-        <stop stopColor="#00554F" offset="100%" />
+        <stop
+          stopColor="#000A17"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00554F"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="29.8433528%"
@@ -35,8 +47,14 @@ const SVGComponent = (props) => (
         y2="100%"
         id="linearGradient-3"
       >
-        <stop stopColor="#0093ED" offset="0%" />
-        <stop stopColor="#00F3AB" offset="100%" />
+        <stop
+          stopColor="#0093ED"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00F3AB"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="65.7777302%"
@@ -45,8 +63,14 @@ const SVGComponent = (props) => (
         y2="0%"
         id="linearGradient-4"
       >
-        <stop stopColor="#000A17" offset="0%" />
-        <stop stopColor="#00554F" offset="100%" />
+        <stop
+          stopColor="#000A17"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00554F"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="61.8236321%"
@@ -55,8 +79,14 @@ const SVGComponent = (props) => (
         y2="0%"
         id="linearGradient-5"
       >
-        <stop stopColor="#000A17" offset="0%" />
-        <stop stopColor="#00554F" offset="100%" />
+        <stop
+          stopColor="#000A17"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00554F"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="65.7777302%"
@@ -65,8 +95,14 @@ const SVGComponent = (props) => (
         y2="0%"
         id="linearGradient-6"
       >
-        <stop stopColor="#000A17" offset="0%" />
-        <stop stopColor="#00554F" offset="100%" />
+        <stop
+          stopColor="#000A17"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00554F"
+          offset="100%"
+        />
       </linearGradient>
       <linearGradient
         x1="65.7777302%"
@@ -75,8 +111,14 @@ const SVGComponent = (props) => (
         y2="0%"
         id="linearGradient-7"
       >
-        <stop stopColor="#000A17" offset="0%" />
-        <stop stopColor="#00554F" offset="100%" />
+        <stop
+          stopColor="#000A17"
+          offset="0%"
+        />
+        <stop
+          stopColor="#00554F"
+          offset="100%"
+        />
       </linearGradient>
     </defs>
     <g
@@ -90,7 +132,10 @@ const SVGComponent = (props) => (
         id="\u6700\u7EC8-copy-2"
         transform="translate(-212.000000, -48.000000)"
       >
-        <g id="Group-5-Copy-8" transform="translate(212.000000, 48.000000)">
+        <g
+          id="Group-5-Copy-8"
+          transform="translate(212.000000, 48.000000)"
+        >
           <circle
             id="Oval"
             strokeOpacity={0.2}
@@ -100,7 +145,10 @@ const SVGComponent = (props) => (
             cy={38}
             r={37.5}
           />
-          <g id="Group-12" transform="translate(8.000000, 10.000000)">
+          <g
+            id="Group-12"
+            transform="translate(8.000000, 10.000000)"
+          >
             <circle
               id="Combined-Shape-Copy-5"
               fill="url(#linearGradient-2)"
@@ -114,7 +162,10 @@ const SVGComponent = (props) => (
               fill="url(#linearGradient-3)"
             />
           </g>
-          <g id="Group-58" transform="translate(13.000000, 10.000000)">
+          <g
+            id="Group-58"
+            transform="translate(13.000000, 10.000000)"
+          >
             <path
               d="M24.5000134,9.35820896 C34.7646771,9.35820896 43.0862069,17.7378452 43.0862069,28.0745862 C43.0862069,38.4114627 34.7646771,46.7910448 24.5000134,46.7910448 C14.2351077,46.7910448 5.9137931,38.4114627 5.9137931,28.0745862 C5.9137931,17.7378452 14.2351077,9.35820896 24.5000134,9.35820896 Z"
               id="Path"

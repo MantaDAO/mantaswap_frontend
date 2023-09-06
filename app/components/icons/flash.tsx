@@ -1,4 +1,4 @@
-export const FlashIcon: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const FlashIcon: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       width="15"

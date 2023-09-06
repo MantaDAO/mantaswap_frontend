@@ -1,5 +1,5 @@
-import * as React from "react"
-const SvgComponent = (props) => (
+import * as React from 'react';
+const SvgComponent = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -7,27 +7,30 @@ const SvgComponent = (props) => (
     id="Layer_1"
     x={0}
     y={0}
-    style={{ enableBackground: "new 0 0 3500 3500" }}
+    style={{ enableBackground: 'new 0 0 3500 3500' }}
     viewBox="0 0 3500 3500"
     {...props}
   >
     <style>
-      {
-        ".st0{clip-path:url(#SVGID_00000132789363899692681320000009443289668989775791_)}"
-      }
+      {'.st0{clip-path:url(#SVGID_00000132789363899692681320000009443289668989775791_)}'}
     </style>
     <switch>
       <g>
         <defs>
-          <path id="SVGID_1_" d="M0 0h3500v3500H0z" />
+          <path
+            id="SVGID_1_"
+            d="M0 0h3500v3500H0z"
+          />
         </defs>
         <clipPath id="SVGID_00000116936871678120680990000015592334260170536579_">
-          <use xlinkHref="#SVGID_1_" style={{ overflow: "visible" }} />
+          <use
+            xlinkHref="#SVGID_1_"
+            style={{ overflow: 'visible' }}
+          />
         </clipPath>
         <g
           style={{
-            clipPath:
-              "url(#SVGID_00000116936871678120680990000015592334260170536579_)",
+            clipPath: 'url(#SVGID_00000116936871678120680990000015592334260170536579_)',
           }}
         >
           <defs>
@@ -39,7 +42,7 @@ const SvgComponent = (props) => (
           <clipPath id="SVGID_00000155135208490014429980000018060265555730263181_">
             <use
               xlinkHref="#SVGID_00000147220877405285553740000010102719950154404016_"
-              style={{ overflow: "visible" }}
+              style={{ overflow: 'visible' }}
             />
           </clipPath>
           <image
@@ -47,14 +50,13 @@ const SvgComponent = (props) => (
             width={3500}
             height={3500}
             style={{
-              overflow: "visible",
-              clipPath:
-                "url(#SVGID_00000155135208490014429980000018060265555730263181_)",
+              overflow: 'visible',
+              clipPath: 'url(#SVGID_00000155135208490014429980000018060265555730263181_)',
             }}
           />
         </g>
       </g>
     </switch>
   </svg>
-)
-export default SvgComponent
+);
+export default SvgComponent;

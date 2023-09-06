@@ -40,7 +40,7 @@ import IconARCH from '@/app/components/icons/tokens/IconARCH';
 import IconwstETH from '@/app/components/icons/tokens/IconwstETH';
 import IconSHD from '@/app/components/icons/tokens/IconSHD';
 
-export const TOKENS: Token[] = [
+export const TOKENS = [
   {
     code: 'MNTA',
     name: 'MNTA - The Worlds Greatest DAO',
@@ -1702,16 +1702,16 @@ export const TOKENS: Token[] = [
   },
 ];
 
-export function getTokenByCode(code: String) {
-  const token = TOKENS.find((token: Token) => {
+export function getTokenByCode(code) {
+  const token = TOKENS.find((token) => {
     return token.code === code;
   });
 
   return token;
 }
 
-export function getTokenByDenom(denom: String) {
-  const token = TOKENS.find((token: Token) => {
+export function getTokenByDenom(denom) {
+  const token = TOKENS.find((token) => {
     return token.denom === denom;
   });
 
@@ -1720,25 +1720,4 @@ export function getTokenByDenom(denom: String) {
   }
 
   return token;
-}
-
-export interface Token {
-  code: string;
-  name: string;
-  cgId?: string;
-  denom: string;
-  icon: JSX.Element;
-  price: Number;
-  decimals: Number;
-  routes: Route[];
-}
-
-export interface Route {
-  to: String;
-  address: String;
-}
-
-export interface Hop {
-  token: Token;
-  route: Route;
 }

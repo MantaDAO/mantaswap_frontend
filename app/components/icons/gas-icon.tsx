@@ -1,4 +1,4 @@
-export const GasIcon: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const GasIcon: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       viewBox="0 0 16 16"

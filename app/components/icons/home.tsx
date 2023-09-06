@@ -1,4 +1,4 @@
-export const HomeIcon: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const HomeIcon: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       width="17"

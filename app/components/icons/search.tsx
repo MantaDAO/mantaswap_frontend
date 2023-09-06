@@ -1,4 +1,4 @@
-export const SearchIcon: React.FC<React.SVGAttributes<{}>> = (props) => {
+export const SearchIcon: React.FC<React.SVGAttributes<{}>> = (props: any) => {
   return (
     <svg
       width="16"
