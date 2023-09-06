@@ -22,11 +22,8 @@ interface RowProps {
 const Row: React.FC<RowProps> = ({ items }) => (
   <div className="flex items-center w-full justify-between gap-3">
     {items.map((item, itemIndex) => (
-      <>
-        <div
-          className="flex items-center gap-1"
-          key={itemIndex}
-        >
+      <React.Fragment key={itemIndex}>
+        <div className="flex items-center gap-1">
           <img
             src={item.img}
             alt={item.tokenId}
@@ -39,9 +36,8 @@ const Row: React.FC<RowProps> = ({ items }) => (
             key={`divider-${itemIndex}`}
             className="border-b border-dashed grow border-body-2"
           />
-        )}{' '}
-        {/* Add this line */}
-      </>
+        )}
+      </React.Fragment>
     ))}
   </div>
 );

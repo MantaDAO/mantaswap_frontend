@@ -35,7 +35,7 @@ const BridgeScr: React.FC<BridgeProps> = () => {
           type={2}
           className="h-[73px] flex justify-between items-center p-4"
         >
-          <TokenSelector />
+          {/* <TokenSelector /> */}
           <div className="flex flex-col items-end">
             <input
               type="number"

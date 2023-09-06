@@ -6,9 +6,10 @@ type BaseCardProps = {
   className?: string; // Prop type for additional class names
   children?: React.ReactNode; // Prop type for children
   type?: 1 | 2 | 3 | 4 | 5; // Prop type for card type, only accepts 1 or 2
+  onClick?: () => void; // Add the onClick prop
 };
 
-const BaseCard: React.FC<BaseCardProps> = ({ className, children, type = 1 }) => {
+const BaseCard: React.FC<BaseCardProps> = ({ className, children, type = 1, onClick }) => {
   // Validate the type prop to ensure it's either 1 or 2
   if (type !== 1 && type !== 2 && type !== 3 && type !== 4 && type !== 5) {
     throw new Error("Invalid 'type' prop value. Use either 1,2,3,4 or 5.");
@@ -29,7 +30,10 @@ const BaseCard: React.FC<BaseCardProps> = ({ className, children, type = 1 }) =>
     //   animate={{ opacity: 1, scale: 1, translateY: 0 }}
     //   transition={{ duration: 0.3 }}
     // >
-    <div className={cardTypeClasses[type]}>
+    <div
+      className={cardTypeClasses[type]}
+      onClick={onClick}
+    >
       {type !== 4 && (
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3D3D56] to-transparent"></div>
       )}

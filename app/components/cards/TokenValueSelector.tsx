@@ -7,6 +7,7 @@ interface TokenValueSelectorProps {
   img: string;
   ticker: string;
   description: string;
+  onClick?: () => void; // Define the onClick prop
 }
 
 const TokenValueSelector: React.FC<TokenValueSelectorProps> = ({
@@ -15,11 +16,13 @@ const TokenValueSelector: React.FC<TokenValueSelectorProps> = ({
   img,
   ticker,
   description,
+  onClick, // Use the onClick prop
 }) => {
   return (
     <BaseCard
       type={2}
-      className="flex p-3 gap-2 h-[56px] items-end"
+      className="flex p-3 gap-2 h-[56px] items-end cursor-pointer hover:bg-surface-c3 transition"
+      onClick={onClick} // Attach the onClick event handler to the card
     >
       <div className="h-full flex gap-3 items-center">
         <img
