@@ -17,6 +17,7 @@ import LogoSm from '../brand/LogoSmall';
 
 import useAuthStore from '@/store/authStore';
 import UserMenu from './UserMenu';
+import ConnectButton from './ConnectButton';
 
 type NavItem = {
   label: string;
@@ -118,7 +119,7 @@ const Nav: React.FC = () => {
             <div className="sm:hidden">
               <LogoSm />
             </div>
-            {signedIn ? <UserMenu /> : <Button variant="primary">Connect</Button>}
+            {signedIn ? <UserMenu /> : <ConnectButton />}
           </div>
         </div>
       </div>

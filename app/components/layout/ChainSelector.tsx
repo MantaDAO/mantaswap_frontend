@@ -60,7 +60,7 @@ const ChainSelector: React.FC = () => {
             className="w-[300px] p-[24px] flex flex-col"
           >
             <div>
-              <h3>Select chain</h3>
+              <h4>Select chain</h4>
               <p>Change your network</p>
             </div>
             <div className="flex flex-col gap-2">
