@@ -16,10 +16,10 @@ const vaults = [
     denom: 'factory/kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8smmwsks49sqjg326/ulp',
     tokens: {
       token1: {
-        denom: 'demon-MNTA',
+        denom: 'denom-MNTA',
       },
       token2: {
-        demon: 'denom-KUJI',
+        denom: 'denom-KUJI',
       },
     },
   },
@@ -36,7 +36,7 @@ const vaults = [
         denom: 'denom-OSMO',
       },
       token2: {
-        demon: 'denom-USDC',
+        denom: 'denom-USDC',
       },
     },
   },
@@ -53,7 +53,7 @@ const vaults = [
         denom: 'denom-BTC',
       },
       token2: {
-        demon: 'denom-ETH',
+        denom: 'denom-ETH',
       },
     },
   },
@@ -70,7 +70,7 @@ const vaults = [
         denom: 'denom-XRP',
       },
       token2: {
-        demon: 'denom-LTC',
+        denom: 'denom-LTC',
       },
     },
   },
@@ -87,7 +87,7 @@ const vaults = [
         denom: 'denom-XLM',
       },
       token2: {
-        demon: 'denom-ADA',
+        denom: 'denom-ADA',
       },
     },
   },
@@ -104,7 +104,7 @@ const vaults = [
         denom: 'denom-DOT',
       },
       token2: {
-        demon: 'denom-LINK',
+        denom: 'denom-LINK',
       },
     },
   },
@@ -121,7 +121,7 @@ const vaults = [
         denom: 'denom-XTZ',
       },
       token2: {
-        demon: 'denom-VET',
+        denom: 'denom-VET',
       },
     },
   },
@@ -138,7 +138,7 @@ const vaults = [
         denom: 'denom-MNTA',
       },
       token2: {
-        demon: 'denom-OSMO',
+        denom: 'denom-OSMO',
       },
     },
   },
@@ -155,7 +155,7 @@ const vaults = [
         denom: 'denom-KUJI',
       },
       token2: {
-        demon: 'denom-USDC',
+        denom: 'denom-USDC',
       },
     },
   },
@@ -172,18 +172,9 @@ const vaults = [
         denom: 'denom-BTC',
       },
       token2: {
-        demon: 'denom-XRP',
+        denom: 'denom-XRP',
       },
     },
-  },
-  {
-    code: 'ETH/LTC',
-    name: 'ETH/LTC',
-    description: 'Liquidity Pool',
-    label: 'BOW',
-    pool_type: 'Liquidity Pool',
-    algo: 'Constant Product',
-    denom: 'factory/kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8',
   },
   {
     code: 'ETH/LTC',
@@ -198,7 +189,7 @@ const vaults = [
         denom: 'denom-ETH',
       },
       token2: {
-        demon: 'denom-LTC',
+        denom: 'denom-LTC',
       },
     },
   },
@@ -215,7 +206,7 @@ const vaults = [
         denom: 'denom-XRP',
       },
       token2: {
-        demon: 'denom-XLM',
+        denom: 'denom-XLM',
       },
     },
   },
@@ -232,7 +223,7 @@ const vaults = [
         denom: 'denom-DOT',
       },
       token2: {
-        demon: 'denom-XTZ',
+        denom: 'denom-XTZ',
       },
     },
   },
@@ -249,7 +240,7 @@ const vaults = [
         denom: 'denom-ADA',
       },
       token2: {
-        demon: 'denom-DOT',
+        denom: 'denom-DOT',
       },
     },
   },
@@ -266,24 +257,7 @@ const vaults = [
         denom: 'denom-LINK',
       },
       token2: {
-        demon: 'denom-XTZ',
-      },
-    },
-  },
-  {
-    code: 'VET/ADA',
-    name: 'VET/ADA',
-    description: 'Liquidity Pool',
-    label: 'BOW',
-    pool_type: 'Liquidity Pool',
-    algo: 'Constant Product',
-    denom: 'factory/kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8smmwsks49sqjg326/ulp',
-    tokens: {
-      token1: {
-        denom: 'denom-VET',
-      },
-      token2: {
-        demon: 'denom-ADA',
+        denom: 'denom-XTZ',
       },
     },
   },

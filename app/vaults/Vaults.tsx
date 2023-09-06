@@ -69,17 +69,6 @@ const VaultsComponent = () => {
               ))}
             </select>
           </InputWrap>
-          {/* <InputWrap>
-            <select
-              name="Type 1"
-              id="type-1"
-              className="h-[47px] w-full"
-            >
-              <option value="Type 1">Type 1</option>
-              <option value="Type 2">Type 2</option>
-              <option value="Type 3">Type 3</option>
-            </select>
-          </InputWrap> */}
           <InputWrap>
             <input
               type="checkbox"

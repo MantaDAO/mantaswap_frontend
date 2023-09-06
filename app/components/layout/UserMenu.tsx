@@ -11,47 +11,11 @@ import BaseCard from '../cards/Base';
 import TokenValue from '../cards/TokenValue';
 import { useState } from 'react';
 import Popper from '../ui/Popper';
-
-const recentTokens = [
-  {
-    tokenId: 'mnta',
-    ticker: 'MNTA',
-    img: '/img/icons/manta.png',
-    description: 'Manta',
-    balance: '0.000000',
-  },
-  {
-    tokenId: 'osmosis',
-    ticker: 'OSMO',
-    img: '/img/icons/osmosis.png',
-    description: 'Osmosis',
-    balance: '0.000000',
-  },
-  {
-    tokenId: 'kujira',
-    ticker: 'KUJI',
-    img: '/img/icons/kujira.webp',
-    description: 'Kujira',
-    balance: '0.000000',
-  },
-  {
-    tokenId: 'usdc',
-    ticker: 'USDC',
-    img: '/img/icons/usdc.png',
-    description: 'USDC',
-    balance: '0.000000',
-  },
-  {
-    tokenId: 'usk',
-    ticker: 'USK',
-    img: '/img/icons/usk.png',
-    description: 'USK',
-    balance: '0.000000',
-  },
-];
+import useTokenStore from '@/store/tokenStore';
 
 const UserMenu = () => {
   const [expandTokens, setExpandTokens] = useState(false);
+  const { allTokens } = useTokenStore();
   return (
     <>
       <Popover className="relative backdrop-blur-lg">
@@ -142,7 +106,7 @@ const UserMenu = () => {
                           className={`absolute w-full h-28 bottom-0 left-0 bg-gradient-to-b from-transparent to-surface-lighter z-10`}
                         ></div>
                       )}
-                      {recentTokens.map((token, index) => (
+                      {allTokens.map((token: any, index: number) => (
                         <TokenValue
                           key={index}
                           tokenId={token.tokenId}
