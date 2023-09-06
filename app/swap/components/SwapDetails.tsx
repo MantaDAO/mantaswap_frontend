@@ -3,14 +3,7 @@ import React, { useState } from 'react';
 import BaseCard from '@/app/components/cards/Base';
 import Button from '@/app/components/ui/Button';
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence
-
-// Define the SwapDetail component
-const SwapDetail: React.FC<{ label: string; value: string }> = ({ label, value }) => (
-  <div className="flex items-center justify-between">
-    <span className="text-md font-medium text-body">{label}</span>
-    <span className="text-md font-medium text-header">{value}</span>
-  </div>
-);
+import SwapDetailLine from '@/app/components/cards/SwapDetailLine';
 
 const SwapDetails = ({ details }: { details: { label: string; value: string }[] }) => {
   const [expanded, setExpanded] = useState(false);
@@ -32,7 +25,7 @@ const SwapDetails = ({ details }: { details: { label: string; value: string }[] 
               exit={{ opacity: 0, height: 0 }}
             >
               {details.map((detail, index) => (
-                <SwapDetail
+                <SwapDetailLine
                   key={index}
                   label={detail.label}
                   value={detail.value}

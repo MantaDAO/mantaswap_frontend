@@ -7,9 +7,16 @@ type DialogModalProps = {
   isOpen: boolean; // Prop to control visibility
   onClose: () => void; // Prop to handle the close action
   className?: string;
+  transparent?: boolean;
 };
 
-const DialogModal = ({ children, isOpen, className = '', onClose }: DialogModalProps) => {
+const DialogModal = ({
+  children,
+  isOpen,
+  className = '',
+  onClose,
+  transparent = false,
+}: DialogModalProps) => {
   return (
     <Transition.Root
       show={isOpen}
@@ -45,7 +52,7 @@ const DialogModal = ({ children, isOpen, className = '', onClose }: DialogModalP
             >
               <Dialog.Panel className="relative transform overflow-hidden px-5">
                 <BaseCard
-                  type={1}
+                  type={transparent ? 4 : 1}
                   className={`w-full xs:w-[420px] p-5 mx-auto ${className}`}
                 >
                   {children}
