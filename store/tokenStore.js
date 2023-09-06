@@ -480,6 +480,8 @@ const useTokenStore = create((set) => ({
   allTokens: allTokens,
   activeChain: 'kujira',
   vaults: vaults,
+  slippage: '0.3',
+  setSlippage: (slippage) => set({ slippage: slippage }),
   setActiveChain: (chain) => set({ activeChain: chain }),
   setActiveFromToken: (token) => set({ activeFromToken: token }),
   setActiveToToken: (token) => set({ activeToToken: token }),

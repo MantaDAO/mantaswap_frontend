@@ -27,7 +27,7 @@ const ConnectButton = () => {
           <Button
             onClick={() => setShowModal(false)}
             size="icon"
-            className="absolute top-3 right-3"
+            className="absolute top-4 right-4"
           >
             <XMarkIcon className="w-4" />
           </Button>
