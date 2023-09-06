@@ -2,8 +2,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import BaseCard from '../cards/Base';
 import Button from '../ui/Button';
-import { useAtom } from 'jotai';
-import { currentChainIdAtom } from '@/store/atoms';
+import useTokenStore from '@/store/tokenStore';
 
 type Chain = {
   name: string;
@@ -25,13 +24,13 @@ const chains: Record<string, Chain> = {
 };
 
 const ChainSelector: React.FC = () => {
-  const [currentChainId, setCurrentChainId] = useAtom(currentChainIdAtom);
+  const { activeChain, setActiveChain } = useTokenStore();
   return (
     <Popover className="relative backdrop-blur-lg">
       <Popover.Button
         className={`flex items-center gap-1 relative z-10 outline-none bg-surface-c1 hover:bg-surface-c3 t1 shadow-c1 border-gradient h-[40px] rounded px-3 group ring-header ui-open:border-light transition`}
       >
-        {currentChainId === 'kujira' ? (
+        {activeChain === 'kujira' ? (
           <img
             src="/img/icons/kujira.webp"
             alt="Kujira"
@@ -70,8 +69,8 @@ const ChainSelector: React.FC = () => {
                 return (
                   <Button
                     key={key}
-                    variant={cgId == currentChainId ? 'primary' : 'neutral'}
-                    onClick={() => setCurrentChainId(cgId)}
+                    variant={cgId == activeChain ? 'primary' : 'neutral'}
+                    onClick={() => setActiveChain(cgId)}
                   >
                     <div className="flex items-center gap-2">
                       <img

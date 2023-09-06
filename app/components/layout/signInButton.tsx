@@ -1,11 +1,10 @@
 'use client';
 
 import Button from '../ui/Button';
-import { useAtom } from 'jotai';
-import { demoSignedIn } from '@/store/atoms';
+import useAuthStore from '@/store/authStore';
 
 const DemoSignInButton = () => {
-  const [signedIn, setSignedIn] = useAtom(demoSignedIn);
+  const { signedIn, setSignedIn } = useAuthStore();
   return (
     <Button
       className="bottom-0 right-0 mr-5 mb-5"

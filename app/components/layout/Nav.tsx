@@ -15,8 +15,7 @@ import Button from '../ui/Button';
 import ChainSelector from './ChainSelector';
 import LogoSm from '../brand/LogoSmall';
 
-import { useAtom } from 'jotai';
-import { demoSignedIn } from '@/store/atoms';
+import useAuthStore from '@/store/authStore';
 import UserMenu from './UserMenu';
 
 type NavItem = {
@@ -49,7 +48,7 @@ const navItems: Record<string, NavItem> = {
 };
 
 const Nav: React.FC = () => {
-  const [signedIn, setSignedIn] = useAtom(demoSignedIn);
+  const { signedIn, setSignedIn } = useAuthStore();
   const pathname = usePathname();
 
   return (
