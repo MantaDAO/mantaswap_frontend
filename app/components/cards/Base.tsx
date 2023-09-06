@@ -15,7 +15,7 @@ const BaseCard: React.FC<BaseCardProps> = ({
   children,
   type = 1,
   onClick,
-  absolute,
+  absolute = false,
 }) => {
   // Validate the type prop to ensure it's either 1 or 2
   if (type !== 1 && type !== 2 && type !== 3 && type !== 4 && type !== 5) {
