@@ -2,8 +2,13 @@
 import create from 'zustand';
 
 function getRandomBalance(min, max) {
-  return (Math.random() * (max - min) + min).toFixed(6);
+  return (Math.random() * (max - min) + min).toFixed(3);
 }
+const getRandomIndex = (max) => Math.floor(Math.random() * max);
+const getRandomString = (length) =>
+  Math.random()
+    .toString(36)
+    .substring(2, 2 + length);
 
 const vaults = [
   {
@@ -263,6 +268,41 @@ const vaults = [
   },
 ];
 
+let vaultRewards = [];
+
+for (let i = 0; i < 10; i++) {
+  vaultRewards.push({
+    code: 'MNTA',
+    name: 'MNTA',
+    description: 'Liquidity Pool',
+    img: '/img/icons/manta.png',
+    label: 'BOW',
+    pool_type: 'Liquidity Pool',
+    algo: 'Constant Product',
+    denom: 'factory/kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8smmwsks49sqjg326/ulp',
+    amount: getRandomBalance(0.1, 100),
+    value: getRandomBalance(0.1, 100),
+    price: getRandomBalance(0.1, 100),
+    vaults: [
+      {
+        ...vaults[getRandomIndex(15)],
+        amount: getRandomBalance(0.1, 100),
+        value: getRandomBalance(0.1, 100),
+      },
+      {
+        ...vaults[getRandomIndex(15)],
+        amount: getRandomBalance(0.1, 100),
+        value: getRandomBalance(0.1, 100),
+      },
+      {
+        ...vaults[getRandomIndex(15)],
+        amount: getRandomBalance(0.1, 100),
+        value: getRandomBalance(0.1, 100),
+      },
+    ],
+  });
+}
+
 const popularTokens = [
   {
     tokenId: 'mnta',
@@ -481,6 +521,7 @@ const useTokenStore = create((set) => ({
   activeChain: 'kujira',
   vaults: vaults,
   slippage: '0.3',
+  vaultRewards: vaultRewards,
   setSlippage: (slippage) => set({ slippage: slippage }),
   setActiveChain: (chain) => set({ activeChain: chain }),
   setActiveFromToken: (token) => set({ activeFromToken: token }),
