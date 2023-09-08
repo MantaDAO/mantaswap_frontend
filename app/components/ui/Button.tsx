@@ -21,10 +21,10 @@ const Button: React.FC<ButtonProps> = ({
     {
       'button-neutral': variant === 'neutral',
       'button-primary': variant === 'primary',
-      'text-white bg-gray-500': variant === 'shade', // to do
+      'button-shade': variant === 'shade', // to do
       'button-tertiary': variant === 'tertiary', // to do
-      'text-white bg-blue-500': variant === 'blue', // to do
-      'text-white bg-red-500': variant === 'red', // to do
+      'button-blue': variant === 'blue', // to do
+      'button-red': variant === 'red', // to do
       'button-disabled cursor-not-allowed': variant === 'disabled', // to do
     },
     {

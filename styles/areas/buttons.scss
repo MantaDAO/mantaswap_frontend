@@ -16,6 +16,42 @@
   background-repeat: no-repeat;
   @apply bg-[#7325F3] bg-opacity-20;
 }
+.button-red {
+  &:hover {
+    @apply bg-opacity-40;
+  }
+  box-shadow:
+    0px 0px 16px 0px rgba(224, 35, 35, 0.5) inset,
+    0px 0px 10px 0px rgba(224, 35, 35, 0.4) inset;
+  border-top: 1px solid #ef6d6d;
+  border-bottom: 1px solid #e02323;
+  background-image: linear-gradient(#ef6d6d, #e02323), linear-gradient(#ef6d6d, #e02323);
+  background-size: 1px 100%;
+  background-position:
+    0 0,
+    100% 0;
+  background-repeat: no-repeat;
+  @apply bg-[#E02323] bg-opacity-20;
+}
+
+.button-blue {
+  &:hover {
+    @apply bg-opacity-40;
+  }
+  box-shadow:
+    0px 0px 16px 0px rgba(35, 88, 224, 0.5) inset,
+    0px 0px 10px 0px rgba(35, 88, 224, 0.4) inset;
+
+  border-top: 1px solid #98b4f9;
+  border-bottom: 1px solid #2358e0;
+  background-image: linear-gradient(#98b4f9, #2358e0), linear-gradient(#98b4f9, #2358e0);
+  background-size: 1px 100%;
+  background-position:
+    0 0,
+    100% 0;
+  background-repeat: no-repeat;
+  @apply bg-[#2358E0] bg-opacity-20;
+}
 
 .button-tertiary {
   &:hover {
