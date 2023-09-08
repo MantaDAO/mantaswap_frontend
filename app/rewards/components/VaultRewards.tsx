@@ -48,7 +48,7 @@ const VaultRewards = () => {
             </div>
 
             {Array.from({ length: 4 }).map((_, index) => (
-              <BaseCard>
+              <BaseCard key={index}>
                 <div
                   key={index}
                   className="flex items-center pb-1 px-5 text-md h-11"
